@@ -1,0 +1,29 @@
+/* Write your code here: */
+
+/* group selector*/
+h1, h2 {
+    color:blueviolet
+}
+
+/*
+ .box > .done {
+    color: firebrick;
+}*/
+
+/* parent selector*/
+.box > p {
+    color: firebrick;
+}
+
+/* descendant selector*/
+.box li {
+    color: blue;
+}
+
+li.done {
+    color: seagreen;
+}
+
+ul p.done {
+    font-size: 0.5rem;
+}

@@ -1,0 +1,54 @@
+body {
+    color: #40514e;
+    text-align: center;
+  }
+
+.profile-img {
+    height: 150px;
+    border-radius: 50%;
+  }
+
+.skills { 
+    text-align:right;
+}
+
+.bottom-container {
+    background-color: #3268b2;
+}
+
+h1 {
+    color: white;
+}
+
+button {
+    color: #1d1d51;
+}
+
+.hero {
+    background-color: #bdbde4;
+      }
+
+.top-container {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.intro {
+    width: 30%;
+    margin: auto;
+}
+
+.list {
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.resume-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
