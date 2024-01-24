@@ -1,5 +1,7 @@
 function fibonacciGenerator (n) {
-
+    //Do NOT change any of the code above 👆
+        
+        //Write your code here:
         let sequence = [];
         if (n === 1) {
             sequence = [0];
@@ -19,6 +21,15 @@ function fibonacciGenerator (n) {
 
         
             return sequence;
+        
+        
+        
+        
+        
+        
+        //Return an array of fibonacci numbers starting from 0.
+        
+    //Do NOT change any of the code below 👇
     }
     
     
