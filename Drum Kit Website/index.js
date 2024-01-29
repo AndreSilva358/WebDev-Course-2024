@@ -2,9 +2,16 @@
 //let numberDrums = document.querySelecotrAll(".drum").length;
 //we use .length to get the number of drums we have within the 'drum' class. 
 
-for (i = 0; i < document.querySelectorAll(".drum").length ; i++){
+for (i = 0; i < document.querySelector(".drum").length ; i++){
 
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        alert("I got clicked.");
-    });
-}
+    }
+    
+    
+    
+    
+    
+    
+    
+    //var audio = new Audio('./sounds/crash.mp3');
+    //audio.play();    });
