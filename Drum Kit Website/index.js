@@ -2,10 +2,10 @@
 //let numberDrums = document.querySelecotrAll(".drum").length;
 //we use .length to get the number of drums we have within the 'drum' class. 
 
-for (i = 0; i < document.querySelector(".drum").length ; i++){
+for (i = 0; i < document.querySelectorAll(".drum").length ; i++){
 
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        var buttonInnerHTML = this.buttonInnerHTML;
+    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+        var buttonInnerHTML = this.InnerHTML;
     
         switch (buttonInnerHTML) {
             case w:
@@ -13,8 +13,6 @@ for (i = 0; i < document.querySelector(".drum").length ; i++){
                 var tom1 = new Audio('./sounds/tom1.mp3');
                 tom1.play();
                 break;
-        
-
                 
             case a:
             
@@ -37,6 +35,17 @@ for (i = 0; i < document.querySelector(".drum").length ; i++){
                 var snare = new Audio('./sounds/snare.mp3');
                 snare.play();
                 break;
+
+            case k:
+                var crash = new Audio("/sounds/crash.mp3");
+                crash.play();
+                break;
+
+            case l:
+                var kick = new Audio("/sounds/kick.mp3");
+                kick.play();
+                break;
+
             default:
                 break;
         }
