@@ -49,7 +49,7 @@ for (i = 0; i < document.querySelectorAll(".drum").length ; i++){
             default:
                 break;
         }
-    }
+    });
     
     
     
