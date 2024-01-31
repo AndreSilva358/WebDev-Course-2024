@@ -51,7 +51,9 @@ for (i = 0; i < document.querySelectorAll(".drum").length ; i++){
         }
     });
     
-    
+    document.addEventListener("keydown", function(){
+        alert("Key was pressed.");
+    })
     
     
     
