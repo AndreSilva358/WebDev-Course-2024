@@ -63,5 +63,6 @@ for (i = 0; i < document.querySelectorAll(".drum").length ; i++){
     
     function buttonAnimation (currentkey) {
         let activeButton = document.querySelector ("." + currentkey); //selects the current key and concatenates it with a dot
+        activeButton.classList.add("pressed")
     }
 }
