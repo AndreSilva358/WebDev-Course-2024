@@ -1,2 +1,2 @@
 //JQuery("h1");
-$("h1").css("color", "blue")
+$("h1").css("big-title another-class");
