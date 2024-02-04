@@ -9,3 +9,9 @@ function nextSequence(){
     
     gamePattern.push(randomChosenColour);
 }
+
+$("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
+// what I thought was the way to play audio $("#"+randomChosenColour).audio.play("sounds/"+randomChosenColour+".mp3");
+let audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+audio.play();
