@@ -1,4 +1,4 @@
-let gamePattern = [randomChosenColour];
+let gamePattern = [];
 
 let buttonColours = ["red", "blue", "green", "yellow"];
 
