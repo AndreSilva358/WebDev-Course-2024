@@ -21,3 +21,5 @@ $("button").on("mouseover", function(){
 $("button").on("click", function(){
 	$("button").text("Dammit, you weren't supposed to actually click me.");
 }) 
+
+$("h1").animate({opacity: 0.8})
