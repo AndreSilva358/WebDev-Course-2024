@@ -28,3 +28,7 @@ function playSound(name) {
   let audio = new Audio("sounds/" + randomChosenColour + ".mp3");
   audio.play();
 }
+
+function animatePress(currentColour){
+$("#"+currentColour).addClass(".pressed").delay(100).removeClass(".pressed");
+}
