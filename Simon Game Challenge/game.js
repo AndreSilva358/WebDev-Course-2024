@@ -18,6 +18,8 @@ $(".btn").click(function () {
 
   playSound(userChosenColour); //will play sound according to the user's click
   animatePress(userChosenColour);
+  checkAnswer(userClickedPattern.slice - 1);
+
 });
 
 function nextSequence() {
@@ -44,4 +46,8 @@ function animatePress(currentColour){
   setTimeout(function() {
     $("#"+currentColour).removeClass("pressed");
   }, 100);
+}
+
+function checkAnswer(currentLevel){
+
 }
