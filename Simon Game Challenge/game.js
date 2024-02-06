@@ -1,8 +1,20 @@
+
+let level = 0;
+
 let gamePattern = [];
 
 let buttonColours = ["red", "blue", "green", "yellow"];
 
 let userClickedPattern = [];
+
+let started = false
+
+$(document).keypress(function(event){
+  nextSequence();
+  $("h1").text("Level"+level);
+  nextSequence()
+  started = true;
+})
 
 $(".btn").on("click", function () {
   let userChosenColour = $(this).attr(".id");
@@ -11,6 +23,8 @@ $(".btn").on("click", function () {
 });
 
 function nextSequence() {
+  level++;
+
   let randomNumber = Math.floor(Math.random()(0 * 4));
 
   let randomChosenColour = buttonColours[randomNumber];
@@ -20,6 +34,7 @@ function nextSequence() {
   $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
 
+  $("h1").text("Level"+level);
 
   // what I thought was the way to play audio $("#"+randomChosenColour).audio.play("sounds/"+randomChosenColour+".mp3");
 }
