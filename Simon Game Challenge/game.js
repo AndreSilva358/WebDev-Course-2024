@@ -59,12 +59,12 @@ function checkAnswer(currentLevel){
     }
   }
 else {
-  let wrongAudio = new Audio("sounds/" + wrong + ".mp3");
-  wrongAudio.play();
-  $("body").css.addClass("game-over");
+  playSound("wrong");
+  $("body").addClass("game-over");
   setTimeout(function () {
-    $("body").css.removeClass("game-over");
+    $("body").removeClass("game-over");
   }, 200);
+  $("h1").text("Game Over, Press Any Key to Restart");
 } 
 }
 
