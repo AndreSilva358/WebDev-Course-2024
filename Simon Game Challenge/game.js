@@ -18,7 +18,7 @@ $(".btn").click(function () {
 
   playSound(userChosenColour); //will play sound according to the user's click
   animatePress(userChosenColour);
-  checkAnswer(userClickedPattern.slice - 1); //this might be wrong
+  checkAnswer(userClickedPattern.length-1);
 
 });
 
@@ -53,11 +53,18 @@ function checkAnswer(currentLevel){
   if (gamePattern[currentLevel]===userClickedPattern[currentLevel]){ //checks the current game pattern against the current user pattern
     console.log("sucess")
     if (userClickedPattern.length === gamePattern.length){
-    setTimeout(nextSequence, 1000 );
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);         
     }
   }
 else {
-  console.log("failure")
+  let wrongAudio = new Audio("sounds/" + wrong + ".mp3");
+  wrongAudio.play();
+  $("body").css.addClass("game-over");
+  setTimeout(function () {
+    $("body").css.removeClass("game-over");
+  }, 200);
 } 
 }
 
