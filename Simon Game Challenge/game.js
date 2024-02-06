@@ -9,17 +9,21 @@ let userClickedPattern = [];
 
 let started = false
 
-$(document).keypress(function(event){
-  nextSequence();
-  $("h1").text("Level"+level);
+$(document).keypress(function(){
+  if (!started)
+  {
+  $("h1").text("Level "+level);
   nextSequence()
   started = true;
+  }
 })
 
-$(".btn").on("click", function () {
+$(".btn").click(function () {
   let userChosenColour = $(this).attr(".id");
   userClickedPattern.push(userChosenColour);
+
   playSound(userChosenColour); //will play sound according to the user's click
+  animatePress(userChosenColour);
 });
 
 function nextSequence() {
