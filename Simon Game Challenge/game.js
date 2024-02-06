@@ -18,11 +18,12 @@ $(".btn").click(function () {
 
   playSound(userChosenColour); //will play sound according to the user's click
   animatePress(userChosenColour);
-  checkAnswer(userClickedPattern.slice - 1);
+  checkAnswer(userClickedPattern.slice - 1); //this might be wrong
 
 });
 
 function nextSequence() {
+  userClickedPattern.length = 0;
   level++;
   $("h1").text("Level "+level);
   
@@ -49,5 +50,14 @@ function animatePress(currentColour){
 }
 
 function checkAnswer(currentLevel){
-
+  if (gamePattern[currentLevel]===userClickedPattern[currentLevel]){ //checks the current game pattern against the current user pattern
+    console.log("sucess")
+    if (userClickedPattern.length === gamePattern.length){
+    setTimeout(nextSequence, 1000 );
+    }
+  }
+else {
+  console.log("failure")
+} 
 }
+
