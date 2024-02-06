@@ -1,18 +1,13 @@
-
 let level = 0;
-
 let gamePattern = [];
-
 let buttonColours = ["red", "blue", "green", "yellow"];
-
 let userClickedPattern = [];
-
 let started = false
 
 $(document).keypress(function(){
   if (!started){
   $("h1").text("Level "+level);
-  nextSequence()
+  nextSequence();
   started = true;
   }
 })
@@ -27,19 +22,15 @@ $(".btn").click(function () {
 
 function nextSequence() {
   level++;
-
   $("h1").text("Level "+level);
-
-  let randomNumber = Math.floor(Math.random()(0 * 4));
-
+  
+  let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColour = buttonColours[randomNumber];
-
+  
   gamePattern.push(randomChosenColour);
 
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
-
-
   // what I thought was the way to play audio $("#"+randomChosenColour).audio.play("sounds/"+randomChosenColour+".mp3");
 }
 
@@ -49,5 +40,5 @@ function playSound(name) {
 }
 
 function animatePress(currentColour){
-$("#"+currentColour).addClass(".pressed").delay(100).removeClass(".pressed");
+  $("#"+currentColour).addClass("pressed").delay(100).removeClass("pressed");
 }
