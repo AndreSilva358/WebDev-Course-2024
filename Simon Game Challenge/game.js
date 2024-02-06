@@ -2,7 +2,7 @@ let level = 0;
 let gamePattern = [];
 let buttonColours = ["red", "blue", "green", "yellow"];
 let userClickedPattern = [];
-let started = false
+let started = false;
 
 $(document).keypress(function(){
   if (!started){
@@ -65,6 +65,12 @@ else {
     $("body").removeClass("game-over");
   }, 200);
   $("h1").text("Game Over, Press Any Key to Restart");
+  startOver();
 } 
 }
 
+function startOver(){
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
