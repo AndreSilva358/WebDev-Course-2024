@@ -3,8 +3,6 @@ let gamePattern = [];
 let buttonColours = ["red", "blue", "green", "yellow"];
 let userClickedPattern = [];
 let started = false
-//let lastElement = userClickedPattern[userClickedPattern.length - 1];
-let lastElement = userClickedPattern.slice(-1);
 
 $(document).keypress(function(){
   if (!started){
@@ -17,7 +15,6 @@ $(document).keypress(function(){
 $(".btn").click(function () {
   let userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
-  checkAnswer(lastElement);
 
   playSound(userChosenColour); //will play sound according to the user's click
   animatePress(userChosenColour);
@@ -43,14 +40,8 @@ function playSound(name) {
 }
 
 function animatePress(currentColour){
-  $("#"+currentColour).addClass("pressed").delay(100).removeClass("pressed");
-}
-
-function checkAnswer(currentLevel){
-  if (lastElement===randomChosenColour){
-    console.log("sucess")
-  }
-else {
-  console.log("failure")
-} 
+  $("#"+currentColour).addClass("pressed");
+  setTimeout(function() {
+    $("#"+currentColour).removeClass("pressed");
+  }, 100);
 }
