@@ -21,14 +21,18 @@ function passwordChecker (req, res, next) {
    next();
 }
 
-
+app.use (passwordChecker);
 
 app.get ("/", (req, res) => {
      res.sendFile(__dirname + "/public/index.html");
     })
     
  app.post ("/check", (req, res) => {
-    password = req.body["password"];
+    if (userAuthenticated = true) {
+      res.sendFile(__dirname + "/public/secret.html");
+  } else {
+    res.sendFile(__dirname + "/public/index.html");
+    }
 });
 
 app.listen(port, () => {
