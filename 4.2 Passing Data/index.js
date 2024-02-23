@@ -6,12 +6,14 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {});
-res.render("index.ejs");
+app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
+
 
 app.post("/submit", (req, res) => {
-const lengthName = req.body['fname'].length+req.body['lname'].length;
-res.render("index.ejs", {numberOfLetters: lengthName});
+const lengthName = req.body["fName"].length+req.body["fName"].length;
+  res.render("index.ejs", {numberOfLetters: lengthName});
 });
 
 app.listen(port, () => {
