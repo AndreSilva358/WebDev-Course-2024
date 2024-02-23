@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <% if (locals.letterNumber) { %>
+  <% if (locals.letterNumber) { %> <%# we can use locals to check if the numberOfLetters was passed. If it was then it will trigger the if statement, showing how many letters there are in the user's name. %>
     <h1>Hey mate. There are <%= letterNumber %> letters in your name. Did you know that?</h1>
     <% } else { %>
       <h1>Enter your name below buddyyy</h1>
